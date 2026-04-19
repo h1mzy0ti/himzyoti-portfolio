@@ -1,364 +1,571 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Himjyoti Talukdar | Student 7 Backend Developer">
-  <meta name="keywords" content="Himjyoti Talukdar, Software Developer, Python, Django, Backend Developer">
-  <title>himjyoti - portfolio</title>
-  <link rel="icon" type="image/x-icon" href="assets/media/fav.png">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Add Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Himjyoti Talukdar - Portfolio</title>
+    <link rel="icon" type="image/png"
+        href="https://lh3.googleusercontent.com/a/ACg8ocJ_gN7GmaZST_YyU2niNMS2QTKWi3Mg0GAObjLO8VYW0I05KmL3=s400-c">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
 </head>
 
-<body class="light-mode">
-  <div id="root">
-    <header>
-      <div class="nav-container">
-        <nav>
-          <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#skills">SKILLS </a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
+<body>
+    <div class="bg-grid"></div>
+    <div class="glow top-glow"></div>
+    <div class="glow bottom-glow"></div>
 
-      </div>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-inner">HT</div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <div class="nav-item-dropdown">
+                    <button class="nav-item dropdown-btn">
+                        More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="chevron-icon">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="blogs.html" class="dropdown-item">Blogs</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-btn" id="search-btn" aria-label="Open Command Palette">
+                    <span class="search-text">Search...</span>
+                    <kbd class="kbd">Ctrl K</kbd>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon-moon">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main>
-      <section id="home" class="home-section">
-        <div class="hero-container">
-          <div class="hero-content">
-            <h1 class="title">HI I'M <span>Himjyoti</span></h1>
-            <p class="subtitle">A student | Developer</p>
-            <p class="hero-description">I'm a Python developer passionate about backend development. I love building efficient systems and exploring microcontrollers and electronics. I also solve Capture The Flag (CTF) challenges for fun!</p>
-            <div class="hero-stats">
-              <div class="stat-card">
-                <div class="stat-icon">
-                  <i class="fab fa-github"></i>
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-card-flip-wrapper" id="hero-flip-wrapper">
+                <!-- FRONT FACE -->
+                <div class="hero-card hero-card-front">
+                    <div class="hero-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="globe-icon" id="globe-flip-trigger" title="Click to flip" style="cursor:pointer">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <path d="M2 12h20" />
+                        </svg>
+                        <span class="view-count" id="ist-clock">--:-- --</span>
+                    </div>
+                    <div class="hero-card-body">
+                        <div class="avatar-wrapper popup-trigger">
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocJ_gN7GmaZST_YyU2niNMS2QTKWi3Mg0GAObjLO8VYW0I05KmL3=s400-c"
+                                alt="Avatar" class="avatar glitch-element" id="hero-avatar">
+                        </div>
+                        <div class="hero-info">
+                            <h1 class="hero-name">
+                                Himjyoti Talukdar
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="#3B82F6" stroke="white" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="verified-icon">
+                                    <path
+                                        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>
+                            </h1>
+                            <p class="hero-role">Python • Backend</p>
+                            <div class="hero-badges">
+                                <span class="badge">Builder</span>
+                                <span class="badge idle-badge">
+                                    <span class="status-dot"></span> Watering life 🍃
+                                </span>
+                            </div>
+                        </div>
+                        <div class="learning-square">
+                            <div class="learning-top">
+                                <span>currently i am learning</span>
+                            </div>
+                            <div class="learning-items">
+                                <span class="learning-tag">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
+                                        alt="Go">
+                                    Golang
+                                </span>
+                                <span class="learning-tag">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="16" y="16" width="6" height="6" rx="1" />
+                                        <rect x="2" y="16" width="6" height="6" rx="1" />
+                                        <rect x="9" y="2" width="6" height="6" rx="1" />
+                                        <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                                        <path d="M12 12V8" />
+                                    </svg>
+                                    System design
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-info">
-                  <img src="https://github-readme-activity-graph.vercel.app/graph?username=h1mzy0ti&theme=react-dark" 
-                       alt="GitHub Activity Graph" 
-                       style="width: 100%; max-width: 800px; height: auto;">
+                <!-- BACK FACE: Movie Credits -->
+                <div class="hero-card hero-card-back">
+                    <div class="hero-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="globe-icon" id="globe-flip-back" title="Click to flip back" style="cursor:pointer">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        <span class="view-count" style="font-size:0.75rem; opacity: 0.5;">things i've touched</span>
+                    </div>
+                    <div class="credits-viewport">
+                        <div class="credits-reel" id="credits-reel">
+                            <p>Wrote a Django middleware to auto-block brute-force logins</p>
+                            <p>Reduced API p99 latency by 40% with query batching</p>
+                            <p>Replaced cron jobs with Celery beat schedules</p>
+                            <p>Built a dynamic OTP rate-limiter using Redis TTLs</p>
+                            <p>Set up Gunicorn + Nginx reverse proxy from scratch</p>
+                            <p>Designed a multi-tenant DB schema with row-level isolation</p>
+                            <p>Provisioned EC2 instances and attached EBS volumes manually</p>
+                            <p>Wrote custom Django management commands for data migrations</p>
+                            <p>Fixed N+1 queries in DRF serializers using select_related</p>
+                            <p>Containerised a 3-service app with Docker Compose networks</p>
+                            <p>Configured S3 lifecycle rules to auto-expire temp uploads</p>
+                            <p>Set Kafka consumer group offsets after a bad deployment</p>
+                            <p>Debugged a silent 500 that only appeared behind a load balancer</p>
+                            <p>Wired Celery to publish task results back to Redis</p>
+                            <p>Built a webhook retry queue with exponential backoff</p>
+                            <p>Wrote Prometheus-style health metrics for a Django service</p>
+                            <p>Migrated a SQLite dev DB to PostgreSQL without data loss</p>
+                            <p>Tracked down a thread-safety bug in a shared cache object</p>
+                            <p>Rolled back a breaking migration using Django's --fake flag</p>
+                            <p>Wrote a GCP Cloud Run deployment pipeline in YAML</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-icon">
-                  <i class="fas fa-code"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="prose">
+                <p>I’m a software engineer working mostly with Django and Flask. I enjoy building APIs, connecting
+                    systems, and making things a bit more reliable each time. I’m interested in automation,
+                    microservices, and integrations, and I try to keep things simple without overcomplicating them.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python">
+                    <span>Python</span>
                 </div>
-                <div class="stat-info">
-                  <img src="https://leetcode-stats.vercel.app/api?username=himzyoti&theme=dark" 
-                       alt="LeetCode Stats" 
-                       style="width: 100%; max-width: 800px; height: auto;">
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                    <span>Django</span>
                 </div>
-              </div>
-            </div>
-            <div class="hero-cta">
-              <a href="assets/media/Himjyoti_Talukdar_Resume_recent.pdf" class="resume-btn">Download Resume <i class="fas fa-download"></i></a>
-              <a href="#contact" class="contact-btn">Get in Touch <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <div class="section-content">
-            <h3>Experience</h3>
-            <ul class="education-list">
-                <li>
-                  
-                    <strong>Backend Developer Intern</strong> – Codtech It Solutions (Jun 2024 - Aug 2024)
-                </li>
-            </ul>
-            <br>
-            <h3>Education</h3>
-            <ul class="education-list">
-                <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Kristu-Jayanti-College-Logo.png/1175px-Kristu-Jayanti-College-Logo.png" alt="Kristu Jayanti College Logo" class="college-logo">
-                    <strong>Master's Degree in Computer Science</strong> – Kristu Jayanti College, Autonomous (2023-2025)
-                </li>
-                <li>
-                    <img src="https://cdn.universitykart.com//Content/upload/admin/affbytk1.tpt.png" alt="Assam Downtown University Logo" class="college-logo">
-                    <strong>Bachelor's of Computer Applications (BCA) – CTIS</strong> – Assam Downtown University (2020-2023)
-                </li>
-            </ul>
-        </div>
-    </section>
-    
-
-      <section id="skills" class="section">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-container">
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-            <span>Python</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-            <span>Django</span>
-          </div>
-          
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Mysql">
-            <span>MySql</span>
-          </div>
-
-          <div class="tech-icon">
-            <img src="https://docs.celeryq.dev/en/stable/_static/celery_512.png" alt="Celery" width="40" height="40">
-            <span>Celery</span>
-          </div>
-
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-            <span>HTML5</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-            <span>CSS3</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-            <span>Git</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
-            <span>Postman</span>
-          </div>
-          <div class="tech-icon">
-            <img src="assets/media/render.svg" alt="Render">
-            <span>Render</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="aws">
-            <span>Aws</span>
-          </div>
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-            <span>Docker</span>
-          </div>
-      
-          <div class="tech-icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
-            <span>Linux</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/h1mzy0ti/RoninEye/refs/heads/main/screenshots/re1.png" alt="graphy">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/RoninEye" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="PostgreSQL">
+                    <span>PostgreSQL</span>
                 </div>
-              </div>
-            </div>
-            <div class="project-details">
-              <h3>RoninEye</h3>
-              <p>An Api performance monitoring service built with Django</p>
-              <div class="project-tech">
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">Django.auth.crontib</span>
-                <span class="tech-tag">ApexCharts</span>
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-              </div>
-            </div>
-          </div>
-
-        
-          <div class="project-card">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/h1mzy0ti/Graphy/refs/heads/main/images/0.png" alt="graphy">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/Graphy" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://docs.celeryq.dev/en/stable/_static/celery_512.png" alt="Celery">
+                    <span>Celery</span>
                 </div>
-              </div>
-            </div>
-            <div class="project-details">
-              <h3>Graphy</h3>
-              <p>This project combines Django and matplotlib to generate graphs and charts from excel or csv data providing visualization</p>
-              <div class="project-tech">
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">Django.auth.crontib</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/media/expense.png" alt="GPS X Project Image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/Gps-X" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <span>HTML5</span>
                 </div>
-              </div>
-            </div>
-            <div class="project-details">
-              <h3>Expense Tracker</h3>
-              <p>Expense Tracker streamlines the process of expense logging, allowing users to effortlessly input
-and categorize transactions.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Flask</span>
-                <span class="tech-tag">MySql</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">Linux</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/h1mzy0ti/Gps-X/refs/heads/main/image/GpsX%20mockup.png" alt="GPS X Project Image">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/Gps-X" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    <span>CSS3</span>
                 </div>
-              </div>
-            </div>
-            <div class="project-details">
-              <h3>Gps X</h3>
-              <p>GPS tracker based on ESP12F which uses SIM800 GSM Module and NEO-6MV2 GPS Module for GPS functionality.</p>
-              <div class="project-tech">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Esp8266 12F</span>
-                <span class="tech-tag">Neo6m GPS</span>
-                <span class="tech-tag">SIM800L</span>
-                <span class="tech-tag">Mongodb</span>
-                <span class="tech-tag">Aws EC2</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-image">
-              <img src="assets/media/syncled.jpg" alt="syncled">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/SYNC_LED" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
                 </div>
-              </div>
-            </div>
-            <div class="project-details">
-              <h3>Sync Led</h3>
-              <p>This project combines the magic of music with captivating LED visuals, using a NODE MCU ESP8266 and pixel led.</p>
-              <div class="project-tech">
-                <span class="tech-tag">C</span>
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">Arduino IDE</span>
-                <span class="tech-tag">NodeMCU(esp8266)</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="https://raw.githubusercontent.com/h1mzy0ti/Frog_Qr/refs/heads/main/img/2nd.png" alt="syncled">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a href="https://github.com/h1mzy0ti/Frog_Qr" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                        alt="Postman">
+                    <span>Postman</span>
                 </div>
-              </div>
+                <div class="tech-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+                        alt="aws">
+                    <span>Aws</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker">
+                    <span>Docker</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+                    <span>Linux</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                        alt="GCP">
+                    <span>GCP</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure">
+                    <span>Azure</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                        alt="Kafka">
+                    <span>Kafka</span>
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+                    <span>Redis</span>
+                </div>
             </div>
-            <div class="project-details">
-              <h3>Frog Qr</h3>
-              <p>Frog qr is a web-based tool designed to create QR codes dynamically based on user input, typically a URL or text provided by the user. .</p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Html</span>
-                <span class="tech-tag">Css</span>
-                <span class="tech-tag">Vscode</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="extras" class="extras">
-        <h2 class="section-title">Extras</h2>
-        <p>TryHackMe (CTF)</p>
-        <img src="https://tryhackme-badges.s3.amazonaws.com/cyb3rsl0th.png" 
-             alt="TryHackMe Badge" 
-             style="width: 100%; max-width: 260px; height: auto; background-color: #202020; padding: 10px; border-radius: 8px;">
-      </section>
+        </section>
 
-      <section id="contact" class="section">
-        <h2 class="section-title">Connect With Me</h2>
-        <div class="contact-container">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
+        <!-- Experience Timeline -->
+        <section class="section timeline-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="https://www.kuvaka.io/_next/static/media/Logo.f5d60b9d.svg" alt="Company Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">SDE-I Backend</h3>
+                        <p class="timeline-company">Kuvaka Tech</p>
+                        <p class="timeline-date">Aug 2025 - Present</p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-info">
-              <h3>Email</h3>
-              <a href="mailto:himzyoti.talukdar1234@gmail.com">himzyoti.talukdar1234@gmail.com</a>
+        </section>
+
+        <!-- Education Timeline -->
+        <section class="section timeline-section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="https://cdn.universitykart.com//Content/upload/admin/wsxwqpvn.2jj.png"
+                            alt="College Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Master's Degree in Computer Science</h3>
+                        <p class="timeline-company">Kristu Jayanti University, Bangalore</p>
+                        <p class="timeline-date">2023 - 2025</p>
+                    </div>
+                </div>
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="https://cdn.universitykart.com//Content/upload/admin/affbytk1.tpt.png"
+                            alt="College Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bachelor's of Computer Applications (BCA) – CTIS</h3>
+                        <p class="timeline-company">Assam Downtown University</p>
+                        <p class="timeline-date">2020 - 2023</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin"></i>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">RoninEye</h3>
+                    <p class="project-desc">An Api performance monitoring service built with Django</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/RoninEye" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">Graphy</h3>
+                    <p class="project-desc">This project combines Django and matplotlib to generate graphs and charts
+                        from excel or csv data providing visualization.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/Graphy" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">Expense Tracker</h3>
+                    <p class="project-desc">Expense Tracker streamlines the process of expense logging, allowing users
+                        to effortlessly input and categorize transactions.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/Gps-X" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">Gps X</h3>
+                    <p class="project-desc">GPS tracker based on ESP12F which uses SIM800 GSM Module and NEO-6MV2 GPS
+                        Module for GPS functionality.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/Gps-X" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">Sync Led</h3>
+                    <p class="project-desc">This project combines the magic of music with captivating LED visuals, using
+                        a NODE MCU ESP8266 and pixel led.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/SYNC_LED" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h3 class="project-title">Frog Qr</h3>
+                    <p class="project-desc">Frog qr is a web-based tool designed to create QR codes dynamically based on
+                        user input, typically a URL or text provided by the user.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/h1mzy0ti/Frog_Qr" target="_blank" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="contact-info">
-              <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/himjyoti-talukdar-21411222b/" target="_blank">linkedin.com/in/himjyoti-talukdar-21411222b</a>
+        </section>
+
+        <!-- Connect Section -->
+        <section class="section connect-section" id="contact">
+            <h2 class="section-title">Connect</h2>
+            <div class="connect-grid">
+                <a href="https://github.com/h1mzy0ti" target="_blank" class="connect-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                        <path d="M9 18c-4.51 2-5-2-7-2" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://x.com/0xh1mzy" target="_blank" class="connect-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                    </svg>
+                    Twitter
+                </a>
+                <a href="https://www.linkedin.com/in/himjyoti-talukdar-21411222b/" target="_blank" class="connect-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect width="4" height="12" x="2" y="9" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:himzyoti.talukdar1234@gmail.com" class="connect-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    Mail
+                </a>
+                <a href="assets/media/Himjyoti_Talukdar_Resume_recent.pdf"
+                    target="_blank" class="connect-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                    Resume
+                </a>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-x"></i>
-            </div>
-            <div class="contact-info">
-              <h3>X</h3>
-              <a href="https://x.com/0xh1mzy" target="_blank">@0xh1mzy</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 Himjyoti Talukdar</p>
+            <p class="footer-ip">🫣 Your IP: <span id="visitor-ip">...</span> &nbsp;·&nbsp; <span
+                    id="visitor-country">...</span></p>
+        </footer>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <p>&copy; 2025 Himjyoti Talukdar</p>
-        <div class="footer-social">
-          <a href="https://github.com/h1mzy0ti" class="social-link"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/himjyoti-talukdar-21411222b/" class="social-link"><i class="fab fa-linkedin"></i></a>
-          <a href="https://x.com/0xh1mzy" class="social-link"><i class="fab fa-x"></i></a>
+    <!-- Command Palette Dialog -->
+    <dialog id="command-palette" class="cmd-dialog">
+        <div class="cmd-content">
+            <div class="cmd-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="cmd-search-icon">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input type="text" id="cmd-input" placeholder="Type a command or search..." autocomplete="off">
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-group">
+                    <div class="cmd-group-title">Navigation</div>
+                    <button class="cmd-item"
+                        onclick="window.location.hash='#home'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        <span>Home</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.hash='#projects'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                            <polyline points="2 17 12 22 22 17" />
+                            <polyline points="2 12 12 17 22 12" />
+                        </svg>
+                        <span>Projects</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.hash='#about'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                        <span>About Me</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.href='blogs.html'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        <span>Blogs</span>
+                    </button>
+                </div>
+                <div class="cmd-group">
+                    <div class="cmd-group-title">Theme</div>
+                    <button class="cmd-item" id="cmd-theme-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                        </svg>
+                        <span>Toggle Theme</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cmd-footer">
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">↑</kbd>
+                    <kbd class="kbd-small">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">Enter</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">Esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </footer>
-  </div>
-  <script type="module" src="assets/js/script.js"></script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Himjyoti Talukdar",
-      "url": "https://h1mzy0ti.github.io/himzyoti-portfolio/",
-      "sameAs": [
-        "https://www.linkedin.com/in/himjyoti-talukdar-21411222b/",
-        "https://github.com/h1mzy0ti"
-      ]
-    }
-    </script>
+    </dialog>
 </body>
 
 </html>

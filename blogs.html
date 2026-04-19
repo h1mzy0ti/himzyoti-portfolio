@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Blogs - Himjyoti Talukdar</title>
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/a/ACg8ocJ_gN7GmaZST_YyU2niNMS2QTKWi3Mg0GAObjLO8VYW0I05KmL3=s400-c">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="bg-grid"></div>
+    <div class="glow top-glow"></div>
+    <div class="glow bottom-glow"></div>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-inner">HT</div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="margin-right: 4px;">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Home
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-btn" id="search-btn" aria-label="Open Command Palette">
+                    <span class="search-text">Search...</span>
+                    <kbd class="kbd">Ctrl K</kbd>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="theme-icon-moon">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 70vh;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); text-align: center;">There's something cooking... 🍳</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; text-align: center; max-width: 500px; line-height: 1.6;">Check back soon for articles, writeups, and deep dives into Python, backend development, and all things tech.</p>
+    </main>
+
+    <footer class="footer" style="margin-top: auto; border-top: none;">
+        <p>© 2026 Himjyoti Talukdar</p>
+        <p class="footer-ip">🫣 Your IP: <span id="visitor-ip">...</span> &nbsp;·&nbsp; <span id="visitor-country">...</span></p>
+    </footer>
+
+    <!-- Command Palette Dialog -->
+    <dialog id="command-palette" class="cmd-dialog">
+        <div class="cmd-content">
+            <div class="cmd-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="cmd-search-icon">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input type="text" id="cmd-input" placeholder="Type a command or search..." autocomplete="off">
+            </div>
+            <div class="cmd-list">
+                <div class="cmd-group">
+                    <div class="cmd-group-title">Navigation</div>
+                    <button class="cmd-item"
+                        onclick="window.location.href='index.html#home'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        <span>Home</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.href='index.html#projects'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                            <polyline points="2 17 12 22 22 17" />
+                            <polyline points="2 12 12 17 22 12" />
+                        </svg>
+                        <span>Projects</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.href='index.html#about'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                        <span>About Me</span>
+                    </button>
+                    <button class="cmd-item"
+                        onclick="window.location.href='blogs.html'; document.getElementById('command-palette').close();">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                        <span>Blogs</span>
+                    </button>
+                </div>
+                <div class="cmd-group">
+                    <div class="cmd-group-title">Theme</div>
+                    <button class="cmd-item" id="cmd-theme-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                        </svg>
+                        <span>Toggle Theme</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cmd-footer">
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">↑</kbd>
+                    <kbd class="kbd-small">↓</kbd>
+                    <span>to navigate</span>
+                </div>
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">Enter</kbd>
+                    <span>to select</span>
+                </div>
+                <div class="cmd-footer-item">
+                    <kbd class="kbd-small">Esc</kbd>
+                    <span>to close</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>
